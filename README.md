@@ -1,46 +1,27 @@
-# Effects of Seasonal Births and Predation on Disease Spread (Introne and Shaw, 2025)
----
+# Effects of Seasonal Births and Predation on Disease Spread
 
-This repository contains the code for blah blah blah
+This repository contains the code and simulation data for the article "Effects of Seasonal Births and Predation on Disease Spread" by Allison Introne and Leah Shaw
+
+All of the code was developed and run using Python version 3.8.3
 
 ## File Descriptions
----
 
-- Constant_Birth_Tutorial.ipynb: shows how to define the ODEs and run the simulation for the constant birth model for both the linear and hyperbolic predation models. Code calculates the average number of infected individuals for one year and plots the solution after the transient behavior.
+- Constant_Birth_Tutorial.ipynb: shows how to define the system of ODEs, run the simulation for the constant birth linear predation and constant birth hyperbolic predation models, calculate the average number of infected individuals over one year, and plot the solutions after transient behavior
 
-- PulsedBirthTutorial.ipynb: shows how to define the ODEs and run the simulation for the pulsed birth model for both the linear and hyperbolic predation models. Code calculates the average number of infected individuals for one period and plots the solution after the transient behavior.
-    - include SI phase plane plot in this one
+- Pulsed_Birth_Tutorial.ipynb: shows how to define the system of ODEs, run the simulation for the pulsed birth linear predation and pulsed birth hyperbolic predation models, calculate the average number of infected individuals over one period, and plot the solutions after transient behavior. The notebook also includes documentation on the function used to determine the period of the solution and code to graph the log infected vs. susceptible phase plane plots
+    - WIP: check that both period and 5 years plotting works
+    - WIP: add SI phase plane plots. 
+    - WIP: Also change parameters to reproduce figures 2 and 5. Otherwise its good
 
-- ResearchCode.py: contains all the functions needed for simulation runs 
+- Reproduce_figures.ipynb: reproduces figures 1, 3, 4, 6, 7
 
 - save_sim_data_fig4.py: runs simulations and saves data needed to reproduce figure 4
 
-- WIP:Reproduce_figures.ipynb: code to reproduce figures 1, 3, 4, 6, 7
+- save_sim_data_figs_6_7.py: runs simulations and saves data needed to reproduce figures 6 and 7
 
-- WIP:save_sim_data_figs67.py: program to run pulsed birth hyperbolic predation simulations for a range of either g or delta values and save the results. Saves the data for figures 6 and 7
-
-
+- sim_functions.py: contains all the functions needed to run simulations. For documentation on the functions see Constant_Birth_Tutorial.ipynb and Pulsed_Birth_Tutorial.ipynb
 
 
+## Simulation Data
 
-
-
-
-- Figures 2 and 5 need simulations to be run so in the tutorials just make the example parameters the ones in the paper and make a note in read me about not specific code to reproduce these figures
-
-^ Above should be all the code I need (everything needed to reproduce the results)
-
-## Simulation Data - 4/10 complete (code written, run, and results verified with old data)
-- Fig4a_data.csv
-- Fig4bcd_data.csv
-- Fig6_linear_data.csv
-- Fig6_hyperbolic_data.csv
-- Fig7a_constant_data.csv
-
-Need:
-- Fig7a_pulse_data.csv
-- Fig7b_constant_data.csv
-- Fig7b_pulse_data.csv
-- Fig7d_constant_data.csv
-- Fig7d_pulse_data.csv
-
+The data needed to reproduce figures 4, 6, and 7 is stored in the folder named Data
